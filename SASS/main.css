@@ -72,8 +72,8 @@ header {
 
 .localisation {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 100%;
   background-color: rgb(225, 225, 225);
   padding: 15px 0;
@@ -117,20 +117,34 @@ header {
   font-size: 22px;
   padding-bottom: 10px;
 }
+@media screen and (min-width: 992px) {
+  .fonctionnement__title {
+    text-align: center;
+  }
+}
+.fonctionnement__explication {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .fonctionnement__explication ol {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-@media only screen and (min-width: 992px) {
+@media screen and (min-width: 992px) {
   .fonctionnement__explication ol {
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
   }
 }
-@media only screen and (min-width: 992px) {
+@media screen and (min-width: 992px) {
   .fonctionnement__explication ol li {
     padding-left: 30px;
-    width: 30%;
+    min-width: 280px;
+    width: 27%;
   }
 }
 
@@ -141,17 +155,22 @@ header {
   height: 60px;
   min-width: 280px;
   margin-top: 20px;
-  background-color: rgba(209, 209, 209, 0.247);
+  background-color: #F6F6F6;
   border-radius: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+}
+.explication__card:hover {
+  color: #9356DC;
+  background-color: #F5EDFF;
+  cursor: pointer;
 }
 .explication__card--icon {
   position: absolute;
   left: 25px;
   font-size: 18px;
-  color: grey;
+  opacity: 0.6;
 }
-@media only screen and (min-width: 992px) {
+@media screen and (min-width: 992px) {
   .explication__card--icon {
     left: 60px;
   }
@@ -160,11 +179,12 @@ header {
   color: #9356DC;
 }
 .explication__card--text {
+  color: black;
   text-align: center;
   font-weight: 700;
   font-size: 15px;
 }
-@media only screen and (min-width: 992px) {
+@media screen and (min-width: 992px) {
   .explication__card--text {
     font-size: 17px;
   }
@@ -190,12 +210,12 @@ header {
   border-radius: 20px;
   color: white;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   font-size: 12px;
   z-index: 1;
 }
-@media only screen and (min-width: 992px) {
+@media screen and (min-width: 992px) {
   .fonctionnement__explication li::before {
     width: 30px;
     height: 30px;
@@ -205,8 +225,98 @@ header {
   }
 }
 
-img {
-  max-width: 400px;
+.restaurants {
+  padding: 40px 30px;
+  background-color: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 992px) {
+  .restaurants {
+    align-items: center;
+  }
+}
+.restaurants a {
+  text-decoration: none;
+  color: black;
+}
+.restaurants h2 {
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 992px) {
+  .restaurants h2 {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 992px) {
+  .restaurants__position {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 80%;
+  }
+}
+
+.card {
+  min-width: 400px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3);
+}
+@media screen and (min-width: 992px) {
+  .card {
+    min-width: 360px;
+    width: 40%;
+  }
+}
+.card:hover {
+  opacity: 0.7;
+}
+.card__image {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+}
+.card__image--img {
+  object-fit: cover;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -57%);
+}
+.card__body {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+.card__body--name {
+  font-size: 20px;
+}
+.card__body--name h3 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.card__body--heart {
+  margin-right: 20px;
+  font-size: 30px;
+  position: relative;
+}
+.card__body--heart .fa-regular {
+  position: absolute;
+}
+.card__body--heart .fa-solid {
+  opacity: 0.4;
 }
 
 /*# sourceMappingURL=main.css.map */

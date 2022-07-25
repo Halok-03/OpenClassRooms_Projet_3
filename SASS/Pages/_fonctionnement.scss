@@ -1,41 +1,55 @@
+@import "../Utils/mixin";
 .fonctionnement {
     padding: 40px 30px;
     &__title {
         font-weight: 700;
         font-size: 22px;
         padding-bottom: 10px;
+        @include desktop {
+            text-align: center;
+        }
     }
-    &__explication ol{
+    &__explication {
+        @include flex-center;
+        & ol{
         display:flex ;
         flex-direction: column;
         width: 100%;
-        @media only screen and (min-width: 992px) {
+        @include desktop {
             flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            max-width: 80%;
            }
            & li {
-            @media only screen and (min-width: 992px) {
-                padding-left: 30px;;
-                width: 30%;
+            @include desktop {
+                padding-left: 30px;
+                min-width: 280px;
+                width: 27%;
                }
            }
     }
 }
+}
 .explication__card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     height: 60px;
     min-width: 280px;
     margin-top: 20px;
-    background-color: rgba(209, 209, 209, 0.247);
+    background-color: #F6F6F6;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    &:hover {
+        color: $primary-color;
+        background-color: #F5EDFF;
+        cursor: pointer;
+    }
     &--icon {
         position: absolute;
         left: 25px;
         font-size: 18px;
-        color: grey;
-        @media only screen and (min-width: 992px) {
+        opacity: 0.6;
+        @include desktop {
            left: 60px;
            }
         &:hover {
@@ -43,10 +57,11 @@
         }
     }
     &--text {
+        color: black;
         text-align: center;
         font-weight: 700;
         font-size: 15px;
-        @media only screen and (min-width: 992px) {
+        @include desktop {
             font-size: 17px;
            }
     }
@@ -69,12 +84,10 @@
             height: 20px;
             border-radius: 20px;
             color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include flex-center;
             font-size: 12px;
             z-index: 1;
-            @media only screen and (min-width: 992px) {
+            @include desktop {
                 width: 30px;
                 height: 30px;
                 left: 15px;

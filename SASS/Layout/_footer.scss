@@ -1,0 +1,45 @@
+@import "../Utils/mixin";
+
+footer {
+    background-color: #353535;
+    padding: 20px;
+    color: white;
+    @include tablette {
+        @include flex-center;
+        flex-direction: column;
+    }
+    h2 {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    & ul {
+        width: 100%;
+        font-size: 16px;
+        font-weight: 300;
+        @include tablette {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: row;
+        }
+        @include desktop {
+            max-width: 80%;
+        }
+        & li {
+            margin-bottom: 10px;
+            &:hover {
+                color: $secondary-color;
+            }
+            & i{
+                margin-right: 10px;
+            }
+            a{
+                color: white ;
+                text-decoration: none;
+                &:hover {
+                    color: $secondary-color;
+                }
+        }
+    }
+}
+}

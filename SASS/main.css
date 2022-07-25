@@ -75,7 +75,7 @@ header {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: rgb(225, 225, 225);
+  background-color: #EAEAEA;
   padding: 15px 0;
   justify-items: center;
   color: rgb(80, 80, 80);
@@ -117,7 +117,7 @@ header {
   font-size: 22px;
   padding-bottom: 10px;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   .fonctionnement__title {
     text-align: center;
   }
@@ -159,6 +159,11 @@ header {
   border-radius: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
 }
+@media screen and (min-width: 768px) {
+  .explication__card {
+    margin-bottom: 10px;
+  }
+}
 .explication__card:hover {
   color: #9356DC;
   background-color: #F5EDFF;
@@ -184,7 +189,7 @@ header {
   font-weight: 700;
   font-size: 15px;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   .explication__card--text {
     font-size: 17px;
   }
@@ -308,7 +313,7 @@ header {
   margin-bottom: 10px;
 }
 .card__body--heart {
-  margin-right: 20px;
+  margin-right: 10px;
   font-size: 30px;
   position: relative;
 }
@@ -317,6 +322,73 @@ header {
 }
 .card__body--heart .fa-solid {
   opacity: 0.4;
+}
+
+.new {
+  position: relative;
+}
+.new::after {
+  content: "Nouveau";
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #99E2D0;
+  padding: 10px;
+  color: green;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+footer {
+  background-color: #353535;
+  padding: 20px;
+  color: white;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+footer h2 {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+footer ul {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 300;
+}
+@media screen and (min-width: 768px) {
+  footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 992px) {
+  footer ul {
+    max-width: 80%;
+  }
+}
+footer ul li {
+  margin-bottom: 10px;
+}
+footer ul li:hover {
+  color: #FF79DA;
+}
+footer ul li i {
+  margin-right: 10px;
+}
+footer ul li a {
+  color: white;
+  text-decoration: none;
+}
+footer ul li a:hover {
+  color: #FF79DA;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -153,7 +153,7 @@ header {
   justify-content: center;
   align-items: center;
   height: 60px;
-  min-width: 280px;
+  min-width: 200px;
   margin-top: 20px;
   background-color: #F6F6F6;
   border-radius: 20px;
@@ -261,7 +261,7 @@ header {
 }
 
 .card {
-  min-width: 400px;
+  min-width: 200px;
   height: 300px;
   display: flex;
   flex-direction: column;
@@ -288,7 +288,7 @@ header {
 }
 .card__image--img {
   object-fit: cover;
-  width: 100%;
+  width: 130%;
   position: absolute;
   top: 50%;
   left: 50%;

@@ -1,12 +1,9 @@
 @import "./Base/_reset";
-@import "./Base/font";
-@import "./Utils/variables"; 
+@import "./Base/font"; 
 @import "./Layout/header";
-@import "./Pages/localisation";
-@import "./Pages/reservation";
-@import "./Pages/fonctionnement";
-@import "./Pages/restaurants";
+@import "./Pages/index.scss";
 @import "./Layout/footer";
+
 
 
 

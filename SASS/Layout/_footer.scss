@@ -1,6 +1,7 @@
 @import "../Utils/mixin";
 
 footer {
+    width: calc(100% - 40px);
     background-color: #353535;
     padding: 20px;
     color: white;

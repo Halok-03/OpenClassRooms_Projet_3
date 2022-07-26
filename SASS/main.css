@@ -68,6 +68,15 @@ header {
   text-align: center;
   font-size: 30px;
   position: relative;
+  width: 100%;
+}
+header .arrow {
+  color: black;
+  position: absolute;
+  left: 25px;
+}
+header .arrow:hover {
+  opacity: 0.7;
 }
 
 .localisation {
@@ -340,6 +349,7 @@ header {
 }
 
 footer {
+  width: calc(100% - 40px);
   background-color: #353535;
   padding: 20px;
   color: white;

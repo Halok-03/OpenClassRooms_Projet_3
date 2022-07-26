@@ -1,3 +1,254 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.logo {
+  font-family: "Shrikhand", cursive;
+}
+
+header {
+  padding: 15px 0;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  text-align: center;
+  font-size: 30px;
+  position: relative;
+  width: 100%;
+}
+header .arrow {
+  color: black;
+  position: absolute;
+  left: 25px;
+}
+header .arrow:hover {
+  opacity: 0.7;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image {
+  position: relative;
+  width: 100%;
+}
+.image__background {
+  object-fit: cover;
+  width: 100%;
+  height: 400px;
+}
+
+.menu {
+  position: relative;
+  margin-top: -50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: calc(100% - 50px);
+  padding: 25px;
+  background-color: #F6F6F6;
+  border-radius: 30px 30px 0 0;
+}
+@media screen and (min-width: 992px) {
+  .menu {
+    width: 992px;
+  }
+}
+.menu__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu__header--title {
+  font-family: "Shrikhand", cursive;
+  font-weight: 700;
+  font-size: 22px;
+}
+.menu__header--heart {
+  margin-right: 10px;
+  font-size: 30px;
+  position: relative;
+}
+.menu__header--heart .fa-regular {
+  position: absolute;
+}
+.menu__header--heart .fa-solid {
+  opacity: 0.4;
+}
+.menu__section {
+  width: 100%;
+  margin-top: 20px;
+}
+.menu__section--title {
+  position: relative;
+  color: #7B7B7B;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.menu__section--title::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  display: inline-block;
+  background: #99E2D0;
+  height: 3px;
+  width: 30px;
+}
+.menu .card {
+  padding: 15px;
+  background-color: white;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+.menu .card__name {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 20px;
+}
+@media screen and (min-width: 768px) {
+  .menu .card__name {
+    font-size: 23px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu .card__name {
+    font-size: 25px;
+  }
+}
+.menu .card__price {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+}
+@media screen and (min-width: 768px) {
+  .menu .card__price {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu .card__price {
+    font-size: 23px;
+  }
+}
+.menu .card__price--number {
+  font-weight: 700;
+}
+.menu__button {
+  margin: 50px;
+}
+
+footer {
+  width: calc(100% - 40px);
+  background-color: #353535;
+  padding: 20px;
+  color: white;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+footer h2 {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+footer ul {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 300;
+}
+@media screen and (min-width: 768px) {
+  footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 992px) {
+  footer ul {
+    max-width: 80%;
+  }
+}
+footer ul li {
+  margin-bottom: 10px;
+}
+footer ul li:hover {
+  color: #FF79DA;
+}
+footer ul li i {
+  margin-right: 10px;
+}
+footer ul li a {
+  color: white;
+  text-decoration: none;
+}
+footer ul li a:hover {
+  color: #FF79DA;
+}
 
 /*# sourceMappingURL=menu.css.map */

@@ -76,23 +76,52 @@ header .arrow {
   left: 25px;
 }
 header .arrow:hover {
-  opacity: 0.7;
+  color: #9356DC;
 }
 
 .localisation {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  text-align: center;
+}
+.localisation__form {
+  background: transparent;
+  border: none;
+  font-size: 17px;
   width: 100%;
   background-color: #EAEAEA;
   padding: 15px 0;
-  justify-items: center;
+  margin-left: auto;
+  text-align: center;
   color: rgb(80, 80, 80);
   font-weight: 500;
 }
-.localisation .fa-solid {
-  margin-right: 15px;
-  margin-left: -15px;
+@media screen and (min-width: 768px) {
+  .localisation__form {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .localisation__form {
+    font-size: 25px;
+  }
+}
+.localisation__icon {
+  position: absolute;
+  top: 30%;
+  left: 22%;
+  font-size: 17px;
+}
+@media screen and (min-width: 768px) {
+  .localisation__icon {
+    left: 35%;
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .localisation__icon {
+    top: 25%;
+    font-size: 25px;
+  }
 }
 
 .reservation {
@@ -164,33 +193,34 @@ header .arrow:hover {
   height: 60px;
   min-width: 200px;
   margin-top: 20px;
-  background-color: #F6F6F6;
   border-radius: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+}
+.explication__card:hover {
+  background-color: #F5EDFF;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .explication__card {
     margin-bottom: 10px;
   }
 }
-.explication__card:hover {
-  color: #9356DC;
-  background-color: #F5EDFF;
-  cursor: pointer;
-}
 .explication__card--icon {
   position: absolute;
   left: 25px;
   font-size: 18px;
-  opacity: 0.6;
+  color: grey;
+}
+.explication__card .explication__card--icon {
+  background-color: #F6F6F6;
+}
+:hover > .explication__card--icon {
+  color: #9356DC;
 }
 @media screen and (min-width: 992px) {
   .explication__card--icon {
     left: 60px;
   }
-}
-.explication__card--icon:hover {
-  color: #9356DC;
 }
 .explication__card--text {
   color: black;
@@ -291,7 +321,7 @@ header .arrow:hover {
   }
 }
 .card:hover {
-  opacity: 0.7;
+  box-shadow: 0px 0px 70px rgba(0, 0, 0, 0.6);
 }
 .card__image {
   position: relative;
@@ -310,9 +340,8 @@ header .arrow:hover {
 }
 .card__body {
   height: 70px;
-  display: flex;
-  justify-content: space-between;
   margin: 20px;
+  position: relative;
 }
 .card__body--name {
   font-size: 20px;
@@ -323,14 +352,24 @@ header .arrow:hover {
   margin-bottom: 10px;
 }
 .card__body--heart {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
   margin-right: 10px;
   font-size: 35px;
 }
 .card__body .fa-regular {
   position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
 }
 .card__body .fa-solid {
-  opacity: 0.7;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
 }
 
 .new {
@@ -387,9 +426,6 @@ footer ul {
 footer ul li {
   margin-bottom: 10px;
 }
-footer ul li:hover {
-  color: #FF79DA;
-}
 footer ul li i {
   margin-right: 10px;
 }
@@ -418,6 +454,33 @@ footer ul li a:hover {
 .primary__button:hover {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
   background: linear-gradient(#ff8de0, #9e67e0);
+}
+
+.fa-regular-heart {
+  opacity: 1;
+  transition-duration: opacity 250ms;
+  -moz-transition-duration: opacity 250ms;
+  -webkit-transition-duration: opacity 250ms;
+}
+.fa-regular-heart:hover {
+  opacity: 0;
+}
+
+.fa-solid-heart {
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transition-duration: opacity 250ms;
+  -moz-transition-duration: opacity 250ms;
+  -webkit-transition-duration: opacity 250ms;
+}
+.fa-solid-heart:hover {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 1;
 }
 
 /*# sourceMappingURL=main.css.map */

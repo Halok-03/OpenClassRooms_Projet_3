@@ -3,16 +3,39 @@
 
 // Localisation //
 .localisation {
-    @include flex-center;
-    width: 100%;
-    background-color: #EAEAEA;
-    padding: 15px 0;
-    justify-items: center;
-    color: rgb(80, 80, 80);
-    font-weight: 500;
-    .fa-solid {
-        margin-right: 15px;
-        margin-left: -15px;
+    position: relative;
+    text-align: center;
+    &__form {
+        background: transparent;
+        border: none;
+        font-size: 17px;
+        width: 100%;
+        background-color: #EAEAEA;
+        padding: 15px 0;
+        margin-left: auto;
+        text-align: center;
+        color: rgb(80, 80, 80);
+        font-weight: 500;
+        @include tablette {
+            font-size: 20px;
+        }
+        @include desktop {
+            font-size: 25px;
+        }
+    }
+    &__icon {
+        position: absolute;
+        top: 30%;
+        left: 22%;
+        font-size: 17px;
+        @include tablette {
+            left: 35%;
+            font-size: 20px;
+        }
+        @include desktop {
+            top: 25%;
+            font-size: 25px;
+        }
     }
 }
 
@@ -78,28 +101,29 @@
     height: 60px;
     min-width: 200px;
     margin-top: 20px;
-    background-color: #F6F6F6;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    &:hover {
+        background-color:#F5EDFF ;
+        cursor: pointer;
+    }
     @include tablette {
         margin-bottom: 10px;
-    }
-    &:hover {
-        color: $primary-color;
-        background-color: #F5EDFF;
-        cursor: pointer;
     }
     &--icon {
         position: absolute;
         left: 25px;
         font-size: 18px;
-        opacity: 0.6;
+        color: grey;
+        .explication__card & {
+            background-color: #F6F6F6;
+        }
+        :hover > & {
+            color: $primary-color;
+        }
         @include desktop {
            left: 60px;
            }
-        &:hover {
-            color: $primary-color;
-        }
     }
     &--text {
         color: black;
@@ -189,7 +213,7 @@
         width: 40%;
     }
     &:hover {
-        opacity: 0.7;
+        box-shadow: 0px 0px 70px rgba(0, 0, 0, 0.6);
     }
     &__image {
         position: relative;
@@ -208,9 +232,8 @@
     }
     &__body {
         height: 70px;
-        display: flex;
-        justify-content: space-between;
         margin: 20px;
+        position: relative;
         &--name {
             font-size: 20px;
             position: relative;
@@ -220,14 +243,24 @@
             }
         }
         &--heart {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            top: 0;
             margin-right: 10px;
             font-size: 35px;
         }
         .fa-regular {
-                position: absolute;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            top: 0;
          }
          .fa-solid {
-            opacity: 0.7;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            top: 0;
          }
     }
 }

@@ -115,7 +115,7 @@ header .arrow:hover {
   font-weight: 300;
 }
 .reservation__button {
-  padding-top: 25px;
+  margin: 25px 0 20px 0;
 }
 
 .fonctionnement {
@@ -316,6 +316,7 @@ header .arrow:hover {
 }
 .card__body--name {
   font-size: 20px;
+  position: relative;
 }
 .card__body--name h3 {
   font-weight: 700;
@@ -323,14 +324,13 @@ header .arrow:hover {
 }
 .card__body--heart {
   margin-right: 10px;
-  font-size: 30px;
-  position: relative;
+  font-size: 35px;
 }
-.card__body--heart .fa-regular {
+.card__body .fa-regular {
   position: absolute;
 }
-.card__body--heart .fa-solid {
-  opacity: 0.4;
+.card__body .fa-solid {
+  opacity: 0.7;
 }
 
 .new {
@@ -399,6 +399,25 @@ footer ul li a {
 }
 footer ul li a:hover {
   color: #FF79DA;
+}
+
+.primary__button {
+  color: white;
+  background: linear-gradient(#FF79DA, #9356DC);
+  text-decoration: none;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+  font-size: 16px;
+}
+.primary__button:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+  background: linear-gradient(#ff8de0, #9e67e0);
 }
 
 /*# sourceMappingURL=main.css.map */

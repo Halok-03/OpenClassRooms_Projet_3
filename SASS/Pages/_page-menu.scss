@@ -35,26 +35,36 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
+        padding-bottom: 20px;
         &--title {
             font-family: 'Shrikhand', cursive;
             font-weight: 700;
             font-size: 22px;
         }
         &--heart {
-            margin-right: 10px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            top: 0;
             font-size: 30px;
-            position: relative;
             .fa-regular {
                 position: absolute;
+                right: 0;
+                bottom: 0;
+                top: 0;
+             }
+             .fa-solid {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                top: 0;
+             }
             }
-            .fa-solid {
-                opacity: 0.4;
-            }
-        }
     }
     &__section {
         width: 100%;
-        margin-top: 20px ;
+        margin-top: 20px;
         &--title {
         position: relative;
         color: #7B7B7B;
@@ -109,3 +119,5 @@ body {
         margin: 50px ;
     }
 }
+
+

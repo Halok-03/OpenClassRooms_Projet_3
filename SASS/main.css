@@ -456,27 +456,16 @@ footer ul li a:hover {
   background: linear-gradient(#ff8de0, #9e67e0);
 }
 
-.fa-regular-heart {
-  opacity: 1;
-  transition-duration: opacity 250ms;
-  -moz-transition-duration: opacity 250ms;
-  -webkit-transition-duration: opacity 250ms;
-}
-.fa-regular-heart:hover {
-  opacity: 0;
-}
-
 .fa-solid-heart {
+  opacity: 0;
   background: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  opacity: 0;
-  transition-duration: opacity 250ms;
-  -moz-transition-duration: opacity 250ms;
-  -webkit-transition-duration: opacity 250ms;
+  transition: all 500ms cubic-bezier(0.55, 1.2, 0.93, 1);
 }
 .fa-solid-heart:hover {
+  cursor: pointer;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

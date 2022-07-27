@@ -1,25 +1,14 @@
 @import "../Utils/variables";
 
-.fa-regular-heart {
-    opacity: 1;
-    transition-duration: opacity 250ms;
-    -moz-transition-duration: opacity 250ms;
-    -webkit-transition-duration: opacity 250ms;
-    &:hover {
-        opacity: 0;
-    }
-}
-
 .fa-solid-heart {
+    opacity:0;
     background: linear-gradient($secondary-color,$primary-color);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    opacity: 0;
-    transition-duration: opacity 250ms;
-    -moz-transition-duration: opacity 250ms;
-    -webkit-transition-duration: opacity 250ms;
+    transition: all 500ms cubic-bezier(0.55, 1.2, 0.93, 1);
     &:hover {
+        cursor: pointer;
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;

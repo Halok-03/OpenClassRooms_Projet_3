@@ -43,24 +43,16 @@ body {
             font-size: 22px;
         }
         &--heart {
+            position: relative;
+            margin-right: 10px;
+            font-size: 35px;
+        }
+        .fa-solid {
             position: absolute;
             right: 0;
             bottom: 0;
             top: 0;
-            font-size: 30px;
-            .fa-regular {
-                position: absolute;
-                right: 0;
-                bottom: 0;
-                top: 0;
-             }
-             .fa-solid {
-                position: absolute;
-                right: 0;
-                bottom: 0;
-                top: 0;
-             }
-            }
+         }
     }
     &__section {
         width: 100%;

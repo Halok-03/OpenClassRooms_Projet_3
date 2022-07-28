@@ -15,3 +15,7 @@
         @content;
     }
 }
+
+@mixin transition-delay {
+    transition: all 500ms cubic-bezier(0.55, 1.2, 0.93, 1);
+}

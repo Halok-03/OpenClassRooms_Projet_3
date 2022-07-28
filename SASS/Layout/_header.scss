@@ -12,6 +12,7 @@ header {
                 color: black;
                 position: absolute;
                 left: 25px;
+                @include transition-delay;
                 &:hover {
                         color: $primary-color;
                 }

@@ -74,6 +74,7 @@ header .arrow {
   color: black;
   position: absolute;
   left: 25px;
+  transition: all 500ms cubic-bezier(0.55, 1.2, 0.93, 1);
 }
 header .arrow:hover {
   color: #9356DC;
@@ -125,19 +126,11 @@ body {
   font-size: 22px;
 }
 .menu__header--heart {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  font-size: 30px;
+  position: relative;
+  margin-right: 10px;
+  font-size: 35px;
 }
-.menu__header--heart .fa-regular {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  top: 0;
-}
-.menu__header--heart .fa-solid {
+.menu__header .fa-solid {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -253,12 +246,15 @@ footer ul li i {
 footer ul li a {
   color: white;
   text-decoration: none;
+  transition: all 500ms cubic-bezier(0.55, 1.2, 0.93, 1);
 }
 footer ul li a:hover {
   color: #FF79DA;
 }
 
 .primary__button {
+  position: relative;
+  z-index: 1;
   color: white;
   background: linear-gradient(#FF79DA, #9356DC);
   text-decoration: none;
@@ -271,27 +267,58 @@ footer ul li a:hover {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   font-weight: 400;
   font-size: 16px;
-  transition: background-image 500ms cubic-bezier(0.55, 1.2, 0.93, 1);
+  transition: box-shadow 500ms cubic-bezier(0.55, 1.2, 0.93, 1);
 }
 .primary__button:hover {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
-  background: linear-gradient(#ff8de0, #9e67e0);
+}
+.primary__button:hover::after {
+  opacity: 1;
+}
+.primary__button::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 30px;
+  width: 200px;
+  height: 50px;
+  background: linear-gradient(#ff9de4, #a674e2);
+  opacity: 0;
+  z-index: 2;
+  transition: all 500ms cubic-bezier(0.55, 1.2, 0.93, 1);
+}
+.primary__button--span {
+  position: relative;
+  z-index: 3;
+}
+
+.menu__header--heart, .card__body--heart {
+  cursor: pointer;
+}
+.menu__header--heart:hover > .fa-solid-heart, .card__body--heart:hover > .fa-solid-heart {
+  transform: scale(1);
+}
+.menu__header--heart:hover > .fa-regular-heart, .card__body--heart:hover > .fa-regular-heart {
+  transform: scale(0);
+}
+
+.fa-regular-heart {
+  transform-origin: bottom;
+  transform: scale(1);
+  transition: all 500ms cubic-bezier(0.55, 1.2, 0.93, 1);
 }
 
 .fa-solid-heart {
-  opacity: 0;
-  background: linear-gradient(#FF79DA, #9356DC);
+  transform: scale(0);
+  transform-origin: bottom;
+  background: linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 500ms cubic-bezier(0.55, 1.2, 0.93, 1);
-}
-.fa-solid-heart:hover {
-  cursor: pointer;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  opacity: 1;
 }
 
 /*# sourceMappingURL=menu.css.map */

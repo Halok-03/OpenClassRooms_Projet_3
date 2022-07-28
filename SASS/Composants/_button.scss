@@ -1,4 +1,5 @@
 @import "../Utils/variables";
+@import "../Utils/mixin";
 
 .primary__button {
     position: relative;
@@ -22,11 +23,7 @@
     }
     &::after {
         position: absolute;
-        content: '';
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
+        @include content;
         border-radius: 30px;
         width: 200px;
         height: 50px;

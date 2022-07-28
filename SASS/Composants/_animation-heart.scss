@@ -6,27 +6,51 @@
 
 .menu__header--heart, .card__body--heart {
     cursor: pointer;
-    &:hover > .fa-solid-heart{
-        transform: scale(1);
+    &:hover::after {
+        transform: scaleY(0);
+    }
+    &::after {
+        position: absolute;
+        z-index: 2;
+        content: '';
+        top:0 ;
+        right: 0;
+        bottom: 0;
+        height: 35px;
+        width: 40px;
+        transform: scaleY(1);
+        transform-origin: top;
+        @include transition-delay;
     }
     &:hover > .fa-regular-heart{
-        transform: scale(0);
+        opacity: 0;
+    }
+}
+.menu__header--heart {
+    &::after {
+        background-color: #F6F6F6;
+    }
+}
+.card__body--heart {
+    &::after {
+        background-color: white;
+        left: -40px;
     }
 }
 
-.fa-regular-heart{
-    transform-origin: bottom;
-    transform: scale(1);
+.fa-regular-heart{ 
+    z-index: 3;
+    position: relative;
+    opacity: 1;
     @include transition-delay;
 }
 
 
 .fa-solid-heart {
-    transform: scale(0);
-    transform-origin: bottom;
+    z-index: 1;
+    position: relative;
     background: linear-gradient($primary-color,$secondary-color);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    @include transition-delay;
 }

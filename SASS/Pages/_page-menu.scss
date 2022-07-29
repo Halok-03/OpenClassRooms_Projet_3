@@ -86,7 +86,7 @@ body {
             font-weight: 700;
             font-size: 20px;
             @include very-small {
-                font-size: 16px;
+                font-size: 15px;
             }
             @include tablette {
                 font-size: 23px;
@@ -105,7 +105,7 @@ body {
             justify-content: space-between;
             font-size: 18px;
             @include very-small {
-                font-size: 16px;
+                font-size: 15px;
             }
             @include tablette {
                 font-size: 20px;

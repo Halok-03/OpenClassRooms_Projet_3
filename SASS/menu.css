@@ -171,7 +171,7 @@ body {
 }
 @media screen and (max-width: 420px) {
   .menu .card__name--title {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -196,7 +196,7 @@ body {
 }
 @media screen and (max-width: 420px) {
   .menu .card__price {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -393,6 +393,24 @@ footer ul li a:hover {
     transform: rotate(2turn);
   }
 }
+@keyframes apparition-menu {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes apparition-card {
+  0% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 .card:hover .card__name--title {
   width: calc(100% - 60px);
 }
@@ -435,6 +453,58 @@ footer ul li a:hover {
 }
 .card:hover .card__animation--icon {
   animation: rotation 500ms;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(2turn);
+  }
+}
+@keyframes apparition-menu {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes apparition-card {
+  0% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu__section--title, .menu__header, .menu {
+    animation: apparition-menu 0.5s 0s ease-in-out forwards;
+  }
+}
+
+.menu__section ul > li:nth-child(1) {
+  opacity: 0;
+  animation: apparition-card 0.5s 0.3s ease-in-out forwards;
+}
+
+.menu__section ul > li:nth-child(2) {
+  opacity: 0;
+  animation: apparition-card 0.5s 0.6s ease-in-out forwards;
+}
+
+.menu__section ul > li:nth-child(3) {
+  opacity: 0;
+  animation: apparition-card 0.5s 0.9s ease-in-out forwards;
+}
+
+.menu__section ul > li:nth-child(4) {
+  opacity: 0;
+  animation: apparition-card 0.5s 1.2s ease-in-out forwards;
 }
 
 /*# sourceMappingURL=menu.css.map */

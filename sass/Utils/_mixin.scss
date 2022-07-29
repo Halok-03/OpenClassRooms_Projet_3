@@ -1,0 +1,35 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin very-small {
+    @media screen and (max-width: 420px){
+        @content;
+    }
+}
+
+@mixin tablette {
+    @media screen and (min-width: 768px){
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 992px){
+        @content;
+    }
+}
+
+@mixin transition-delay {
+    transition: all 500ms cubic-bezier(0.55, 1.2, 0.93, 1);
+}
+
+@mixin content {
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}

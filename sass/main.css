@@ -1,0 +1,537 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.logo {
+  font-family: "Shrikhand", cursive;
+}
+
+header {
+  padding: 15px 0;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  text-align: center;
+  font-size: 30px;
+  position: relative;
+  width: 100%;
+}
+header .arrow {
+  color: black;
+  position: absolute;
+  left: 25px;
+  transition: all 500ms cubic-bezier(0.55, 1.2, 0.93, 1);
+}
+header .arrow:hover {
+  color: #9356DC;
+}
+
+.localisation {
+  position: relative;
+  text-align: center;
+}
+.localisation__form {
+  background: transparent;
+  border: none;
+  font-size: 17px;
+  width: 100%;
+  background-color: #EAEAEA;
+  padding: 15px 0;
+  margin-left: auto;
+  text-align: center;
+  color: rgb(80, 80, 80);
+  font-weight: 500;
+}
+@media screen and (min-width: 768px) {
+  .localisation__form {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .localisation__form {
+    font-size: 25px;
+  }
+}
+.localisation__icon {
+  position: absolute;
+  top: 30%;
+  left: 22%;
+  font-size: 17px;
+}
+@media screen and (min-width: 768px) {
+  .localisation__icon {
+    left: 35%;
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .localisation__icon {
+    top: 25%;
+    font-size: 25px;
+  }
+}
+
+.reservation {
+  padding: 40px 30px;
+  background-color: rgba(209, 209, 209, 0.247);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.reservation__title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 22px;
+}
+.reservation__description {
+  padding-top: 15px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 300;
+}
+.reservation__button {
+  margin: 25px 0 20px 0;
+}
+
+.fonctionnement {
+  padding: 40px 30px;
+}
+.fonctionnement__title {
+  font-weight: 700;
+  font-size: 22px;
+  padding-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .fonctionnement__title {
+    text-align: center;
+  }
+}
+.fonctionnement__explication {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fonctionnement__explication ol {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media screen and (min-width: 992px) {
+  .fonctionnement__explication ol {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .fonctionnement__explication ol li {
+    padding-left: 30px;
+    min-width: 280px;
+    width: 27%;
+  }
+}
+
+.explication__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  min-width: 200px;
+  margin-top: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  transition: all 500ms cubic-bezier(0.55, 1.2, 0.93, 1);
+}
+.explication__card:hover {
+  background-color: #F5EDFF;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .explication__card {
+    margin-bottom: 10px;
+  }
+}
+.explication__card--icon {
+  position: absolute;
+  left: 25px;
+  font-size: 18px;
+  color: grey;
+  transition: all 500ms cubic-bezier(0.55, 1.2, 0.93, 1);
+}
+.explication__card .explication__card--icon {
+  background-color: #F6F6F6;
+}
+:hover > .explication__card--icon {
+  color: #9356DC;
+}
+@media screen and (min-width: 992px) {
+  .explication__card--icon {
+    left: 60px;
+  }
+}
+.explication__card--text {
+  color: black;
+  text-align: center;
+  font-weight: 700;
+  font-size: 15px;
+}
+@media screen and (min-width: 768px) {
+  .explication__card--text {
+    font-size: 17px;
+  }
+}
+
+.fonctionnement__explication {
+  counter-reset: step;
+}
+.fonctionnement__explication li {
+  position: relative;
+}
+.fonctionnement__explication li::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  top: 40px;
+  bottom: 0;
+  right: 0;
+  left: -10px;
+  background-color: #9356DC;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  z-index: 1;
+}
+@media screen and (min-width: 992px) {
+  .fonctionnement__explication li::before {
+    width: 30px;
+    height: 30px;
+    left: 15px;
+    top: 35px;
+    font-size: 15px;
+  }
+}
+
+.restaurants {
+  padding: 40px 30px;
+  background-color: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 992px) {
+  .restaurants {
+    align-items: center;
+  }
+}
+.restaurants a {
+  text-decoration: none;
+  color: black;
+}
+.restaurants h2 {
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 992px) {
+  .restaurants h2 {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 992px) {
+  .restaurants__position {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 80%;
+  }
+}
+
+.card {
+  min-width: 200px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3);
+  transition: all 500ms cubic-bezier(0.55, 1.2, 0.93, 1);
+}
+@media screen and (min-width: 992px) {
+  .card {
+    min-width: 360px;
+    width: 40%;
+  }
+}
+.card:hover {
+  box-shadow: 0px 0px 70px rgba(0, 0, 0, 0.6);
+}
+.card__image {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+}
+.card__image--img {
+  object-fit: cover;
+  width: 130%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -57%);
+}
+.card__body {
+  height: 70px;
+  margin: 20px;
+  position: relative;
+}
+.card__body--name {
+  font-size: 20px;
+  position: relative;
+}
+.card__body--name h3 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.card__body--heart {
+  height: 35px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin-right: 10px;
+  font-size: 35px;
+}
+.card__body .fa-regular {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+.card__body .fa-solid {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.new {
+  position: relative;
+}
+.new::after {
+  content: "Nouveau";
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #99E2D0;
+  padding: 10px;
+  color: green;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+footer {
+  width: calc(100% - 40px);
+  background-color: #353535;
+  padding: 20px;
+  color: white;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+footer h2 {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+footer ul {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 300;
+}
+@media screen and (min-width: 768px) {
+  footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 992px) {
+  footer ul {
+    max-width: 80%;
+  }
+}
+footer ul li {
+  margin-bottom: 10px;
+}
+footer ul li i {
+  margin-right: 10px;
+}
+footer ul li a {
+  color: white;
+  text-decoration: none;
+  transition: all 500ms cubic-bezier(0.55, 1.2, 0.93, 1);
+}
+footer ul li a:hover {
+  color: #FF79DA;
+}
+
+.primary__button {
+  position: relative;
+  z-index: 1;
+  color: white;
+  background: linear-gradient(#FF79DA, #9356DC);
+  text-decoration: none;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+  font-size: 16px;
+  transition: box-shadow 500ms cubic-bezier(0.55, 1.2, 0.93, 1);
+}
+.primary__button:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+}
+.primary__button:hover::after {
+  opacity: 1;
+}
+.primary__button::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 30px;
+  width: 200px;
+  height: 50px;
+  background: linear-gradient(#ff9de4, #a674e2);
+  opacity: 0;
+  z-index: 2;
+  transition: all 500ms cubic-bezier(0.55, 1.2, 0.93, 1);
+}
+.primary__button--span {
+  position: relative;
+  z-index: 3;
+}
+
+.menu__header--heart, .card__body--heart {
+  cursor: pointer;
+}
+.menu__header--heart:hover::after, .card__body--heart:hover::after {
+  transform: scaleY(0);
+}
+.menu__header--heart::after, .card__body--heart::after {
+  position: absolute;
+  z-index: 2;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 35px;
+  width: 40px;
+  transform: scaleY(1);
+  transform-origin: top;
+  transition: all 500ms cubic-bezier(0.55, 1.2, 0.93, 1);
+}
+.menu__header--heart:hover > .fa-regular-heart, .card__body--heart:hover > .fa-regular-heart {
+  opacity: 0;
+}
+
+.menu__header--heart::after {
+  background-color: #F6F6F6;
+}
+
+.card__body--heart::after {
+  background-color: white;
+  left: -40px;
+}
+
+.fa-regular-heart {
+  z-index: 3;
+  position: relative;
+  opacity: 1;
+  transition: all 500ms cubic-bezier(0.55, 1.2, 0.93, 1);
+}
+
+.fa-solid-heart {
+  z-index: 1;
+  position: relative;
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/*# sourceMappingURL=main.css.map */

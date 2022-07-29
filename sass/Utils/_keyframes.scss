@@ -1,0 +1,28 @@
+@keyframes rotation {
+    0%{
+        transform: rotate(0turn);
+    }
+    100%{
+        transform: rotate(2turn);
+    }
+}
+
+@keyframes apparition-menu {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes apparition-card {
+    0%{
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

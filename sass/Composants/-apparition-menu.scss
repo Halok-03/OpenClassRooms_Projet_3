@@ -10,6 +10,6 @@
 @for $i from 1 through 4 {
     .menu__section ul > li:nth-child(#{$i}){
         opacity: 0;
-        animation: apparition-card 0.5s $i*0.3s ease-in-out forwards;
+        animation: apparition-card 0.5s $i*0.2s ease-in-out forwards;
     }
 }

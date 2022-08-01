@@ -1,0 +1,21 @@
+{
+  "name": "projet_3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./sass/main.scss:./sass/main.css",
+    "sass-menu": "sass --watch ./sass/menu.scss:./sass/menu.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Halok-03/OpenClassRooms_Projet_3.git"
+  },
+  "author": "Baptiste Azevedo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Halok-03/OpenClassRooms_Projet_3/issues"
+  },
+  "homepage": "https://github.com/Halok-03/OpenClassRooms_Projet_3#readme"
+}

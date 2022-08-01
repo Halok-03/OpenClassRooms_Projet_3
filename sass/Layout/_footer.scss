@@ -34,7 +34,6 @@ footer {
             a{
                 color: white ;
                 text-decoration: none;
-                @include transition-delay;
                 &:hover {
                     color: $secondary-color;
                 }

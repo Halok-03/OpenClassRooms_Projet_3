@@ -1,0 +1,70 @@
+@import "../Utils/keyframes";
+@import "../Utils/mixin";
+@import "../Utils/variables";
+
+// Loader // 
+
+.spinner {
+    position: fixed;
+    @include flex-center;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    z-index: 10;
+    opacity: 0.95;
+    animation: disappearance 0.2s 3s ease-in-out forwards;
+    &__content {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    @include flex-center;
+    font-size: 15px;
+    overflow: hidden;
+    z-index: 1;
+    @include tablette {
+        width: 300px;
+        height: 300px;
+        font-size: 30px;
+        }
+    @include desktop {
+        width: 450px;
+        height: 450px;
+        font-size: 45px;
+        }
+    &--text {
+        animation: text-color 2s ease-in-out infinite;
+        }
+    }
+    &__sector {
+        position: absolute;
+        width: 80%;
+        height: 80%;
+        border-radius: 50%;
+        border: 8px solid transparent;
+        mix-blend-mode: overlay;
+        animation: rotate-spinner var(--duration) var(--timing) infinite;
+        @include tablette {
+            border: 12px solid transparent;
+        }
+        @include desktop {
+            border: 15px solid transparent;
+        }
+        &--primary {
+            border-top-color: $primary-color;
+            --duration: 0.8s;
+            --timing: ease-in-out;
+        }
+        
+        &--secondary {
+            border-left-color: $secondary-color;
+            --duration: 1.2s;
+            --timing: ease-in;
+        }
+        
+        &--tertiary {
+            border-right-color: $tertiary-color;
+            --duration: 1.6s;
+            --timing: ease-out;
+        }
+    }
+}

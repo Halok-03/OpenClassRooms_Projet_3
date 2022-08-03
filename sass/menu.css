@@ -410,6 +410,35 @@ footer ul li a:hover {
     transform: translateY(0px);
   }
 }
+@keyframes rotate-spinner {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes text-color {
+  0%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.1;
+  }
+}
+@keyframes disappearance {
+  0% {
+    transform: scale(1);
+    transform-origin: top;
+  }
+  100% {
+    transform: scale(0);
+    transform-origin: top;
+  }
+}
 .card:hover .card__name--title {
   width: calc(100% - 60px);
 }
@@ -478,6 +507,35 @@ footer ul li a:hover {
   100% {
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+@keyframes rotate-spinner {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes text-color {
+  0%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.1;
+  }
+}
+@keyframes disappearance {
+  0% {
+    transform: scale(1);
+    transform-origin: top;
+  }
+  100% {
+    transform: scale(0);
+    transform-origin: top;
   }
 }
 @media screen and (min-width: 992px) {

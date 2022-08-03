@@ -1,9 +1,6 @@
 @import "../Utils/variables";
 @import "../Utils/mixin";
 
-@import "../Utils/variables";
-@import "../Utils/mixin";
-
 .menu__header--heart, .card__body--heart {
     cursor: pointer;
     &:hover::after {

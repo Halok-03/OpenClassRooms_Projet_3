@@ -460,6 +460,14 @@ footer {
     flex-direction: column;
   }
 }
+footer .fa-handshake-angle {
+  width: 14px;
+}
+@media screen and (min-width: 768px) {
+  footer .fa-handshake-angle {
+    width: 20px;
+  }
+}
 footer h2 {
   font-size: 16px;
   margin-bottom: 20px;
